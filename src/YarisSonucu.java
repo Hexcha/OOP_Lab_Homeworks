@@ -9,7 +9,7 @@ public class YarisSonucu {
     }
 
     public int fastest(){
-        int min=minutes[0];
+        int min=Integer.MAX_VALUE;
         for (int minute : minutes) {
             if (minute < min)
                 min = minute;
@@ -23,7 +23,7 @@ public class YarisSonucu {
 
     }
     public int secondFastest(){
-        int min=minutes[0];
+        int min=Integer.MAX_VALUE;
         for (int minute : minutes) {
             if (minute < min && minute!=minutes[fastest()])
                 min = minute;
@@ -37,7 +37,7 @@ public class YarisSonucu {
 
     }
     public int thirdFastest(){
-        int min=minutes[0];
+        int min=Integer.MAX_VALUE;
         for (int minute : minutes) {
             if (minute < min && minute!=minutes[fastest()] && minute!=minutes[secondFastest()])
                 min = minute;
